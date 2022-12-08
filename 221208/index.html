@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        :root {
+            --color1: red;
+            --color2: rgb(100, 200, 255);
+            --size1: 250;
+
+            --color6: green;
+            --color6: var(--color6);
+        }
+        div {
+            width: 100px;
+            height: 100px;
+            border: 1px solid black;
+            margin: 30px;
+        }
+        #box1 {
+            background-color: var(--color2);
+        }
+        #box2 {
+            background-color: var(--color2);
+        }
+        #box3 {
+            background-color: var(--color3, yellow);
+        }
+        #box4 {
+            background-color: var(--color4, var(--color3, var(--color2, --color1)));
+        }
+        #box5 {
+            background-color: var(--color5);
+        }
+        #box6 {
+            --b-size: 200;
+            width: calc(var(--b-size) * 1px);
+            height: calc(var(--b-size) * 1px);
+        }
+
+        #imgbox1 {
+            --img: "galaxy.jpg";
+            /* background: url(calc("img/"+var(--img))); */
+        }
+        #imgbox2 {
+            --img: "img/galaxy.jpg";
+            /* background: url(calc(var(--img))); */
+        }
+        #imgbox3 {
+            --img: url("img/galaxy.jpg");
+            background: var(--img);
+        }
+
+        #box7 {
+            width: calc(var(--size1) * 1px);
+            height: calc(var(--size1) * 1px);
+        }
+        #box8 {
+            --size2: calc(calc(var(--size1) * 1px) - 50px);
+            width: var(--size2);
+            height: var(--size2);
+        }
+        #box9 {
+            background-color: yellow;
+            background-color: var(--color6, greenyellow);
+        }
+    </style>
+</head>
+<body>
+    <div id="box1">box1</div>
+    <div id="box2">box2</div>
+    <div id="box3">box3</div>
+    <div id="box4">box4</div>
+    <div id="box5" style="--color5: orange">box5</div>
+    <div id="box6">box6</div>
+
+    <div id="imgbox1"></div>
+    <div id="imgbox2"></div>
+    <div id="imgbox3"></div>
+
+    <div id="box7">box7</div>
+    <div id="box8">box8</div>
+    <div id="box9">box9</div>
+</body>
+</html>
