@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        section {
+            width: 300px;
+            height: 300px;
+            position: relative;
+            margin: 100px auto;
+            animation: rotates 3s linear infinite;
+            transform-style: preserve-3d;
+        }
+        div {
+            width: 300px;
+            height: 300px;
+            position: absolute;
+            left: 0;
+            top: 0;
+            opacity: 0.3;
+        }
+        div:nth-child(1) {
+            transform: rotateY(0) translate3d(0px, 0px, 100px);
+            background-color: red;
+        }
+        div:nth-child(2) {
+            transform: rotateY(90deg) translate3d(0px, 0px, 100px);
+            background-color: green;
+        }
+        div:nth-child(3) {
+            transform: rotateY(180deg) translate3d(0px, 0px, 100px);
+            background-color: blue;
+        }
+        div:nth-child(4) {
+            transform: rotateY(270deg) translate3d(0px, 0px, 100px);
+            background-color: yellow;
+        }
+        div:nth-child(5) {
+            transform: rotateX(90deg) translate3d(0px, 0px, 100px);
+            background-color: brown;
+        }
+        div:nth-child(6) {
+            transform: rotateX(270deg) translate3d(0px, 0px, 100px);
+            background-color: pink;
+        }
+
+        @keyframes rotates {
+            from {
+                transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+            }
+            to {
+                transform: rotateX(360deg) rotateY(360deg) rotateZ(360deg);
+            }
+        }
+    </style>
+</head>
+<body>
+    <section>
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>4</div>
+        <div>5</div>
+        <div>6</div>
+    </section>
+</body>
+</html>

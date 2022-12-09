@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        :root {
+            --main-bg: #262626;
+            --main-clr: #FFF000;
+            --border-clr: #3C3C3C;
+        }
+        body {
+            background: var(--main-bg);
+        }
+        .ring {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+
+            width: 150px;
+            height: 150px;
+            border: 3px solid var(--border-clr);
+            border-radius: 50%;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+
+            color: var(--main-clr);
+            font-size: 20px;
+            text-align: center;
+            line-height: 150px;
+            letter-spacing: 4px;
+            text-shadow: 0 0 10px var(--main-clr);
+        }
+        .ring::before {
+            content:"";
+
+            position: absolute;
+            top: -3px;
+            left: -3px;
+
+            width: 100%;
+            height: 100%;
+            border: 3px solid transparent;
+            border-top: 3px solid var(--main-clr);
+            border-right: 3px solid var(--main-clr);
+            border-radius: 50%;
+
+            animation: rotateC 2s linear infinite;
+        }
+        span {
+            display: block;
+            position: absolute;
+            top: calc(50% - 2px);
+            left: 50%;
+
+            width: 50%;
+            height: 4px;
+            background: transparent;
+
+            transform-origin: left;
+            animation: rotateO 2s linear infinite;
+        }
+        span::before {
+            content: "";
+
+            position: absolute;
+            top: -6px;
+            right: -8px;
+
+            width: 16px;
+            height: 16px;
+            background-color: var(--main-clr);
+            border-radius: 50%;
+            box-shadow: 0 0 20px var(--main-clr);
+        }
+
+        @keyframes rotateC {
+            from {
+                transform: rotate(0deg);
+            }
+            to {
+                transform: rotate(360deg);
+            }
+        }
+        @keyframes rotateO {
+            from {
+                transform: rotate(45deg);
+            }
+            to {
+                transform: rotate(405deg);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="ring">LOADING
+        <span></span>
+    </div>
+</body>
+</html>
