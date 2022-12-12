@@ -1,0 +1,72 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --delay: 0.2;
+}
+
+body {
+    background-color: black;
+}
+
+#wrap {
+    width: 282px;
+    height: 80px;
+    margin: 200px auto;
+    display: flex;
+    align-items: center;
+}
+
+.bar {
+    width: 12px;
+    height: 80px;
+    float: left;
+    margin-right: 18px;
+    border-radius: 6px;
+    animation: sizechange calc(var(--delay) * 3.75s) ease-in-out infinite alternate;
+}
+
+#wrap .bar:last-child {
+    margin-right: 0;
+}
+
+#wrap .bar:nth-child(1),
+#wrap .bar:nth-child(10) {
+    background-color: purple;
+    animation-delay: calc(var(--delay) * 5s);
+}
+
+#wrap .bar:nth-child(2),
+#wrap .bar:nth-child(9) {
+    background-color: crimson;
+    animation-delay: calc(var(--delay) * 4s);
+}
+
+#wrap .bar:nth-child(3),
+#wrap .bar:nth-child(8) {
+    background-color: deeppink;
+    animation-delay: calc(var(--delay) * 3s);
+}
+
+#wrap .bar:nth-child(4),
+#wrap .bar:nth-child(7) {
+    background-color: orange;
+    animation-delay: calc(var(--delay) * 2s);
+}
+
+#wrap .bar:nth-child(5),
+#wrap .bar:nth-child(6) {
+    background-color: gold;
+    animation-delay: calc(var(--delay) * 1s);
+}
+
+@keyframes sizechange {
+    from {
+        height: 80px;
+    }
+    to {
+        height: 2px;
+    }
+}

@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            margin: 100px;
+        }
+        #triangle1 {
+            width: 0;
+            height: 0;
+            border-bottom: 100px solid dodgerblue;
+            border-left: 100px solid dodgerblue;
+            border-top: 100px solid transparent;
+            border-right: 100px solid transparent;
+        }
+        #triangle2 {
+            width: 0;
+            height: 0;
+            border-bottom: 100px solid dodgerblue;
+            border-right: 100px solid transparent;
+        }
+        #trapezoid {
+            width: 100px;
+            height: 0;
+            border-left: 50px solid transparent;
+            border-right: 50px solid transparent;
+            border-bottom: 100px solid dodgerblue;
+        }
+        #parallelogram {
+            width: 150px;
+            height: 100px;
+            background-color: dodgerblue;
+            transform: skewX(20deg);
+        }
+        #star6 {
+            width: 0;
+            height: 0;
+            border-left: 50px solid transparent;
+            border-right: 50px solid transparent;
+            border-bottom: 100px solid dodgerblue;
+            position: relative;
+        }
+        #star6::after {
+            content: "";
+            width: 0;
+            height: 0;
+            border-left: 50px solid transparent;
+            border-right: 50px solid transparent;
+            border-top: 100px solid dodgerblue;
+            position: absolute;
+            left: -50px;
+            top: 30px;
+        }
+        #hexagon {
+            width: 100px;
+            height: 57.735px;
+            background-color: dodgerblue;
+            position: relative;
+        }
+        #hexagon::before {
+            content: "";
+            width: 100px;
+            height: 57.735px;
+            background-color: dodgerblue;
+            transform: rotate(60deg);
+
+            position: absolute;
+        }
+        #hexagon::after {
+            content: "";
+            width: 100px;
+            height: 57.735px;
+            background-color: dodgerblue;
+            transform: rotate(-60deg);
+
+            position: absolute;
+        }
+        #pentagon {
+            width: 54px;
+            height: 0;
+            border-top: 50px solid dodgerblue;
+            border-left: 18px solid transparent;
+            border-right: 18px solid transparent;
+            position: relative;
+        }
+        #pentagon::before {
+            content: "";
+            width: 0;
+            height: 0;
+
+            border-bottom: 35px solid dodgerblue;
+            border-left: 45px solid transparent;
+            border-right: 45px solid transparent;
+
+            top: -85px;
+            left: -18px;
+            position: absolute;
+        }
+    </style>
+</head>
+<body>
+    <div id="triangle1"></div>
+    <div id="triangle2"></div>
+    <div id="trapezoid"></div>
+    <div id="parallelogram"></div>
+    <div id="star6"></div>
+    <div id="hexagon"></div>
+    <div id="pentagon"></div>
+</body>
+</html>
