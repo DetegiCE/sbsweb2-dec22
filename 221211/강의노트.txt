@@ -1,0 +1,102 @@
+반응형 (responsive) 태그
+- 사용자의 선택이나 사용자의 기기에 따라서 웹 사이트가 반응을 해야 하는 것
+선택: 터치(클릭), 확대/축소
+기기: 모바일(스마트폰), 태블릿, PC
+
+모바일은 PC보다 화면 크기가 작음
+-> 뷰포트를 지정해서 화면의 크기에 따른 확대/축소를 지정 가능
+
+viewport에서 지정할 수 있는 값들
+- width: 뷰포트의 너비
+- height: 뷰포트의 높이
+- initial-scale: 초기 값 (확대/축소에 대해서 초기 값으로 몇 %를 줄지)
+- user-scalable: 확대/축소 가능 여부 (yes, no)
+
+뷰포트를 이용한 크기 단위 -> vw, vh, vmin, vmax
+- vw: viewport width (전체 뷰포트의 너비를 100vw로 두고 비례하여 표기. 1vw는 전체 뷰포트 너비의 1% 다)
+- vh: viewport height (" 높이를 100vh로 두고 비례하여 표기. 1vh는 " 높이의 1% 다.)
+- vmin, vmax: viewport minimum (vw와 vh 중 작은 값), viewport maximum (vw와 vh 중 큰 값)
+
+기존의 % 단위가 부모 아래에 있는 자식에 부여한 경우, 이 길이는 부모에 비례해서 나타났지만, 뷰포트는 전체 창 크기에 비례하기 때문에 이런 장점이 있다.
+
+
+미디어 쿼리 (media query)
+- 사이트에 접속하는 기기(모바일, 태블릿, 임베디드 등)+크기에 따라서 CSS를 다르게 적용하는 것
+
+@media [only, not] 미디어 유형 [조건] and [조건] {
+
+}
+
+768px과 1200px사이의 PC화면
+@media screen and (min-width: 768px) and (max-width: 1200px) {
+	body {
+		background-color: red;
+	}
+}
+
+미디어 유형 
+- all: 모든 기기에 적용
+- screen: 일반적인 컴퓨터(+핸드폰 포함) 스크린
+- tv, print(프린터기), projection(프로젝터) 등
+
+가로너비와 세로너비 속성
+min-width: 해당 CSS를 적용할 최소 너비
+max-width: " 최대 너비
+
+px
+모바일: 320/480 ~ 768 px
+태블릿: 768 ~ 960px
+PC: 960 ~ 1080/1200/1440px
+와이드스크린: 그 이상
+
+~480: 빨간색
+481~960: 파란색
+960~: 초록색
+
+미디어 쿼리도 작성 순서가 매우 중요
+max-width 만 쓰는 경우, 큰 값이 위쪽으로 오도록 설정
+min-width 만 쓰는 경우, 큰 값이 아래로 오도록 설정
+-> 충돌 방지를 위해 그냥 min-width와 max-width를 둘다 사용하기
+
+
+단말기의 너비
+- 창을 띄워서 볼 때
+- min-device-width
+- max-device-width
+
+화면 회전 (orientation)
+- 가로 모드: landscape (풍경화)
+- 세로 모드: portrait (초상화)
+
+
+미디어 쿼리를 이용해서 화면에 보이는 배경 사진을 변경
+- 480px 이하 일 때
+- 480~960px 일 때
+- 960px 이상 일 때
+
+<ul>과 <li> 이용
+768px 이상 일 때
+ -> 메뉴가 가로로 배치
+768px 이하 일 때
+ -> 메뉴가 세로로 배치
+
+
+
+반응형 배치 방식 -> flex 방식 (flexible 유연한 배치), grid 방식 (grid 격자 배치)
+
+grid 방식 : 격자를 만들어서 해당 위치에 배치한다
+- 자유롭고 안정적인 배치
+: 격자가 무조건 동일한 간격이 아니라 원하는대로 설정
+display: grid;
+
+display: block, inline, inline-block;
+-> 이 display 들은 본인을 블록 요소로 바꿀지, 인라인으로 바꿀지를 결정
+
+display: grid, flex;
+-> 이 display 들은 본인의 자식들의 배치를 결정
+
+div > div
+총 12개의 세부 메뉴가 있는데
+960px 이상일 때에는 가로 4 x 세로 3
+768px 이상일 때에는 가로 3 x 세로 4
+480px 이상일 떄에는 가로 2 x 세로 6
