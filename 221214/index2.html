@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        div {
+            width: 50px;
+            height: 50px;
+        }
+        div:nth-child(1) { background-color: crimson; }
+        div:nth-child(2) { background-color: darkorange; }
+        div:nth-child(3) { background-color: darkolivegreen; }
+        div:nth-child(4) { background-color: darkslateblue; }
+        div:nth-child(5) { background-color: darkmagenta; }
+        section {
+            width: 300px;
+            height: 100px;
+            background-color: aquamarine;
+            margin: 0 auto;
+            display: flex;
+        }
+        #wrap2 { justify-content: flex-end; }
+        #wrap3 { justify-content: center; }
+        #wrap4 { justify-content: space-between; }
+        #wrap5 { justify-content: space-around; }
+        #wrap6 {
+            height: 100px;
+            flex-wrap: wrap;
+            flex-direction: column-reverse;
+            justify-content: center;
+        }
+        .a > div:nth-child(1) { height: 70px; }
+        .a > div:nth-child(2) { height: 60px; }
+        .a > div:nth-child(3) { height: 40px; }
+        .a > div:nth-child(4) { height: 100px; }
+        .a > div:nth-child(5) { height: 90px; }
+        #wrap7 { align-items: flex-end; }
+        #wrap8 { align-items: center; }
+        #wrap9 { align-items: baseline; }
+        #wrap9 > div:nth-child(1),
+        #wrap9 > div:nth-child(4) {
+            display: flex;
+            align-items: center;
+        }
+    </style>
+</head>
+<body>
+    <section id="wrap1">
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+    </section>
+    <section id="wrap2">
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+    </section>
+    <section id="wrap3">
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+    </section>
+    <section id="wrap4">
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+    </section>
+    <section id="wrap5">
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+    </section>
+    <section id="wrap6">
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+    </section>
+    <section id="wrap7" class="a">
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+    </section>
+    <section id="wrap8" class="a">
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+    </section>
+    <section id="wrap9" class="a">
+        <div>adf</div>
+        <div>gadf</div>
+        <div>qwet</div>
+        <div>btwbt</div>
+        <div>y5q</div>
+    </section>
+</body>
+</html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        ul {
+            list-style: none;
+        }
+        ul:hover > li {
+            display: block;
+        }
+        ul > li {
+            display: none;
+            margin-left: 20px;
+        }
+        #wrap {
+            display: flex;
+        }
+        @media screen and (min-width: 768px) {
+            #wrap {
+                flex-direction: row;
+            }
+        }
+        @media screen and (max-width: 768px) {
+            #wrap {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        <ul>
+            메뉴1
+            <li>하위1</li>
+            <li>하위2</li>
+            <li>하위3</li>
+        </ul>
+        <ul>
+            메뉴2
+            <li>하위1</li>
+            <li>하위2</li>
+            <li>하위3</li>
+        </ul>
+        <ul>
+            메뉴3
+            <li>하위1</li>
+        </ul>
+        <ul>
+            메뉴4
+            <li>하위1</li>
+            <li>하위2</li>
+        </ul>
+    </div>
+</body>
+</html>

@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        section {
+            width: 300px;
+            height: 200px;
+            margin: 0 auto;
+            background-color: aquamarine;
+            margin-bottom: 30px;
+        }
+        div {
+            width: 50px;
+            height: 50px;
+        }
+        div:nth-child(1) { background-color: crimson; }
+        div:nth-child(2) { background-color: darkorange; }
+        div:nth-child(3) { background-color: darkolivegreen; }
+        div:nth-child(4) { background-color: darkslateblue; }
+        div:nth-child(5) { background-color: darkmagenta; }
+        #wrap1 {
+            display: flex;
+            align-items: center;
+        }
+        #wrap1 > div:nth-child(1) {
+            align-self: flex-end;
+        }
+        #wrap2 {
+            display: flex;
+            flex-wrap: wrap;
+            align-content: center;
+        }
+        #wrap3 {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        .b > div {
+            width: 100%;
+        }
+        #wrap4 {
+            display: flex;
+            justify-content: center;
+        }
+        #wrap4 > div:nth-child(1) {
+            order: 3;
+        }
+        #wrap4 > div:nth-child(3) { 
+            order: 1;
+        }
+        #wrap5 {
+            display: flex;
+        }
+        #wrap5 > div:nth-child(1) {
+            flex: 1 1 0;
+        }
+        #wrap5 > div:nth-child(2) {
+            flex: 1 1 0;
+        }
+        #wrap5 > div:nth-child(3) {
+            flex: 2 2 0;
+        }
+        #wrap5 > div {
+            width: auto;
+            height: auto;
+        }
+
+        #wrap6 {
+            display: flex;
+        }
+        #wrap6 > div:nth-child(1) {
+            flex: 1 1 150px;
+        }
+        #wrap6 > div:nth-child(2) {
+            flex: 1 1 150px;
+        }
+        #wrap6 > div:nth-child(3) {
+            flex: 2 2 150px;
+        }
+        #wrap6 > div {
+            width: 150px;
+            height: auto;
+        }
+    </style>
+</head>
+<body>
+    <section id="wrap1">
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+    </section>
+    <section id="wrap2" class="b">
+        <div></div>
+        <div></div>
+        <div></div>
+    </section>
+    <section id="wrap3" class="b">
+        <div></div>
+        <div></div>
+        <div></div>
+    </section>
+    <section id="wrap4">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>4</div>
+        <div>5</div>
+    </section>
+    <section id="wrap5">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+    </section>
+    <section id="wrap6">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+    </section>
+
+</body>
+</html>

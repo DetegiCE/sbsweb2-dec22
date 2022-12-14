@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        #wrap1, #wrap2, #wrap3, #wrap4 {
+            display: flex;
+            width: 90%;
+            height: 200px;
+            margin: 0 auto;
+            background-color: aquamarine;
+        }
+        #wrap1 {
+            flex-direction: row;
+        }
+        #wrap2 {
+            flex-direction: row-reverse;
+        }
+        #wrap3 {
+            flex-direction: column;
+        }
+        #wrap4 {
+            flex-direction: column-reverse;
+        }
+        #wrap5, #wrap6, #wrap7, #wrap8 {
+            display: flex;
+            margin: 0 auto;
+            background-color: aquamarine;
+            width: 300px;
+            height: 100px;
+        }
+        #wrap6 {
+            flex-wrap: wrap;
+        }
+        #wrap7 {
+            flex-wrap: wrap-reverse
+        }
+        #wrap8 {
+            flex-flow: row-reverse wrap-reverse;
+        }
+        div > div {
+            width: 50px;
+            height: 50px;
+        }
+        div > div:nth-child(3n+1) {
+            background-color: red;
+        }
+        div > div:nth-child(3n+2) {
+            background-color: green;
+        }
+        div > div:nth-child(3n+3) {
+            background-color: blue;
+        }
+    </style>
+</head>
+<body>
+    <div id="wrap1">
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+    <div id="wrap2">
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+    <div id="wrap3">
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+    <div id="wrap4">
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+    <div id="wrap5">
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+    <div id="wrap6">
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+    <div id="wrap7">
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+    <div id="wrap8">
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,115 @@
+flex (플렉시블) - CSS3에 추가된 배치하는 방식
+
+display: block, inline, inline-block
+-> 이 display는 자신을 위한 것
+vs
+display: grid, flex;
+-> 이 display는 내 자식을 위한 것
+
+플렉서블 박스는 부모 박스에 적용이 된다 (자식들의 뱇 배치에 영향이 간다)
+
+display: flex를 적용하는 박스에 대해서 플렉서블 박스 또는 플렉서블로 작동한다
+display: flex가 적용된 자식 박스에 대해서 플렉서블 아이템
+부모 = 플렉서블 박스
+자식 = 플렉서블 아이템
+
+배치를 할 때 방향(가로, 세로)
+- 기본 주축 방향 = 가로, 기본 교차축 방향 = 세로
+- 주축의 정방향이나, 주축의 역방향이냐
+주축이 가로일 때 정방향: 왼쪽 -> 오른쪽
+주축이 가로일 때 역방향: 오른쪽 -> 왼쪽
+주축이 세로일 때 정방향: 위쪽 -> 아래쪽
+주축이 세로일 때 역방향: 아래쪽 -> 위쪽
+
+
+플렉서블 박스로 만들기 위한 속성 display: flex;
+flex -> 플렉서블 박스를 블록 요소로서 플렉서블하게 작동
+inline-flex -> 플렉서블 박스를 인라인 요소로서 플렉서블하게 작동
+
+플렉서블 아이템들의 배치 방향 설정: flex-direction
+- 가로 방향: row (기본 값)
+- 가로 역방향: row-reverse
+- 세로 방향: column
+- 세로 역방향: column-reverse
+
+역방향들은 순서도 바뀐다
+
+flex로 배치를 하면 기본적으로 한 줄에 꽉 채워서 나오게 됨
+플렉스 아이템을 한 줄이 아니라 여러 줄로 배치하기 위해서는 flex-wrap 속성
+- nowrap: 한 줄 배치 (기본 값)
+- wrap: 여러 줄 배치 -> (칸을 넘어갈 수 있다)
+- wrap-reverse: 여러 줄 배치를 하되 역방향 배치
+
+flex-flow 속성: flex-direction과 flex-wrap 속성을 동시에 설정
+flex-flow: [flex-direction 값] [flex-wrap 값]
+
+가로 방향이고 여러 줄 반대
+flex-direction: row;
+flex-wrap: wrap-reverse;
+->flex-flow: row wrap-reverse;
+
+가로 역방향에 여러 줄 반대
+flex-direction: row-reverse
+flex-wrap: wrap-reverse
+-> flex-flow: row-reverse wrap-reverse
+
+
+플렉스 아이템 배치하기
+- 주축 방향 배치: justify-content
+- 교차축 방향 배치: align-items (<-> align-content)
+
+주축 방향 아이템 배치 : justify-content
+- flex-start (기본값): flex-direction의 시작점부터 배치
+- flex-end: flex-direction의 끝지점부터 배치
+- center: 중앙배치
+- space-between: 플렉서블 박스에 아이템들을 전부 배치한 후에 공간이 남아있을 경우, 아이템의 개수를 n개라고 했을 때, 공간을 n-1등분해서 사이사이에 끼워넣는 방식 (아이템들을 동일 간격으로 배치)
+- space-around: 플렉서블 박스에 아이템들을 전부 배치한 후에 공간이 남아있을 경우, 아이템의 개수를 n개라고 했을 때, 공간을 n등분해서 각각의 아이템의 양 옆에 n등분한 공간을 절반씩 부여
+
+1) flex-direction: row 이면서 justify-content: flex-end
+2) flex-direction: row-reverse 이면서 j-c: flex-start 인것의 차이
+공통점: 둘 다 오른쪽으로 배치가 된다
+차이점: 1번은 순서가 html 코드 그대로, 2번은 순서가 html 코드의 반대로
+
+
+교차축 방향 아이템 배치: align-items
+- stretch(기본값): 박스를 확장 배치
+- flex-start: 교차축의 시작점에 배치
+- flex-end: 교차축의 끝 점에 배치
+- center: 교차축의 가운데에 배치
+- baseline: 자식 박스 중 첫 번째 박스의 글자의 위치에 맞춰서 배치가 됨 (글자 기준 배치)
+
+
+교차축 방향 아이템을 개별 배치: align-self
+- 값들은 align-items와 동일
+- 개별 배치이기 때문에 부모에 속성을 부여하는 것이 아닌 플렉스 아이템에 속성을 부여
+
+
+여러 줄 상황에서의 교차축 방향 아이템 배치: align-content
+- stretch, flex-start, flex-end, center, space-between, space-around
+
+
+플렉스 아이템의 순서 바꾸기: order
+- 기본적으로 아이템의 배치는 HTML 코드의 순서대로 배치가 됨. order를 이용해서 아이템의 순서를 변경 가능
+order: 숫자 (0이 기본값)
+1번 -> 순서 3
+2번 -> 순서 0
+3번 -> 순서 1
+4번 -> 순서 0
+5번 -> 순서 0
+
+
+플렉스 아이템의 크기를 조절: flex (아이템에 부여하는 속성)
+flex: [flex-grow] [flex-shrink] [flex-basis]
+flex-grow: 플렉서블 박스에 여백이 남을 경우, 플렉스 아이템의 크기를 늘리는 속성
+flex-shrink: 플렉서블 박스에 아이템이 넘칠 경우, 플렉스 아이템의 크기를 줄이는 속성
+flex-basis: 플렉스 아이템의 기본 크기를 설정하는 속성
+
+
+미디어쿼리+flex 동시에 이용한 메뉴
+
+상위메뉴 + 하위메뉴 동시에 있는 메뉴
+
+768px 이상
+-> 상위 메뉴는 가로 배치, 하위메뉴는 세로 배치
+768px 이하
+-> 상위 메뉴, 하위 메뉴 모두 세로 배치
