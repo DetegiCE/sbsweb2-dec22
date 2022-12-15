@@ -1,0 +1,10 @@
+그리드 레이아웃 - row(행)와 column(열)의 개수/크기를 지정해서 해당 위치에 요소를 배치하는 것
+
+display: grid, inline-grid;
+grid - 블록 요소 상태를 유지한 채로 그리드 배치
+inline-grid - 인라인 요소에서 그리드 배치
+
+개수 지정
+grid-template-columns, grid-template-rows: 그리드 컨테이너에 항목을 배치할 때 열과 행의 크기와 개수를 지정하는 속성
+
+g-t-c와 g-t-r에 사용할 수 있는 fr 단위: fraction (분수) 의 줄임말 -> 상대적인 크기를 지정할 수 있음

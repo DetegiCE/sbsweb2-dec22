@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        .items:nth-child(2n+1) {
+            background-color: gray
+        }
+        .items:nth-child(2n) {
+            background-color: gainsboro;
+        }
+        #wrap1 {
+            display: grid;
+            grid-template-columns: repeat(3, 200px);
+            grid-template-rows: repeat(2, 100px);
+        }
+        #wrap2 {
+            display: grid;
+            grid-template-columns: 1fr 1fr 2fr;
+            grid-template-rows: repeat(2, 100px);
+        }
+        #wrap3 {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: repeat(2, minmax(100px, auto));
+        }
+        #wrap4 {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        }
+        #wrap5 {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+        }
+    </style>
+</head>
+<body>
+    <div id="wrap1">
+        <div class="items"></div>
+        <div class="items"></div>
+        <div class="items"></div>
+        <div class="items"></div>
+        <div class="items"></div>
+    </div>
+    <div id="wrap2">
+        <div class="items"></div>
+        <div class="items"></div>
+        <div class="items"></div>
+        <div class="items"></div>
+        <div class="items"></div>
+    </div>
+    <div id="wrap3">
+        <div class="items">Lorem Ipsum</div>
+        <div class="items">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</div>
+        <div class="items">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</div>
+        <div class="items">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</div>
+        <div class="items">Lorem Ipsum is simply dummy text of the printing</div>
+    </div>
+    <div id="wrap4">
+        <div class="items">Lorem Ipsum</div>
+        <div class="items">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</div>
+        <div class="items">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</div>
+        <div class="items">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</div>
+        <div class="items">Lorem Ipsum is simply dummy text of the printing</div>
+        <div class="items">Lorem Ipsum is simply dummy text of the printing</div>
+    </div>
+    <div id="wrap5">
+        <div class="items">Lorem Ipsum</div>
+        <div class="items">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</div>
+        <div class="items">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</div>
+        <div class="items">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</div>
+        <div class="items">Lorem Ipsum is simply dummy text of the printing</div>
+        <div class="items">Lorem Ipsum is simply dummy text of the printing</div>
+    </div>
+</body>
+</html>

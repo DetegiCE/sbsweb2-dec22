@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        .items {
+            background-color: skyblue;
+            text-align: center;
+        }
+        #gridwrap {
+            display: grid;
+            grid-template-columns: repeat(6, 90px);
+            grid-template-rows: repeat(3, 90px);
+            grid-gap: 10px 10px;
+        }
+        #gridwrap > div:last-child {
+            grid-column: 2/5;
+            grid-row: 2/4;
+        }
+
+        #flexwrap1 .items {
+            width: 90px;
+            height: 90px;
+            margin: 5px;
+        }
+        #flexwrap1 > div {
+            display: flex;
+        }
+        #flexwrap1 .order1 {
+            order: 1;
+        }
+        #flexwrap1 .space {
+            width: 290px;
+            height: 185px;
+        }
+
+        #flexwrap2 .items {
+            width: 90px;
+            height: 90px;
+            margin: 5px;
+        }
+        #flexwrap2 {
+            display: flex;
+        }
+        #flexwrap2 .item3 {
+            display: flex;
+        }
+        #flexwrap2 .space {
+            margin-top: 0;
+            width: 290px;
+            height: 185px;
+        }
+    </style>
+</head>
+<body>
+    <div id="gridwrap">
+        <div class="items">1</div>
+        <div class="items">2</div>
+        <div class="items">3</div>
+        <div class="items">4</div>
+        <div class="items">5</div>
+        <div class="items">6</div>
+        <div class="items">7</div>
+        <div class="items">8</div>
+        <div class="items">9</div>
+        <div class="items">10</div>
+        <div class="items">Space</div>
+    </div>
+    <div id="flexwrap1">
+        <div>
+            <div class="items">1</div>
+            <div class="items">2</div>
+            <div class="items">3</div>
+            <div class="items">4</div>
+            <div class="items">5</div>
+            <div class="items">6</div>
+        </div>
+        <div>
+            <div>
+                <div class="items">7</div>
+                <div class="items">10</div>
+            </div>
+            <div class="items order1">8</div>
+            <div class="items order1">9</div>
+            <div class="items space">Space</div>
+        </div>
+    </div>
+    <div id="flexwrap2">
+        <div>
+            <div class="items">1</div>
+            <div class="items">7</div>
+            <div class="items">10</div>
+        </div>
+        <div>
+            <div class="item3">
+                <div class="items">2</div>
+                <div class="items">3</div>
+                <div class="items">4</div>
+            </div>
+            <div class="items space">Space</div>
+        </div>
+        <div>
+            <div class="items">5</div>
+            <div class="items">8</div>
+        </div>
+        <div>
+            <div class="items">6</div>
+            <div class="items">9</div>
+        </div>
+    </div>
+</body>
+</html>
