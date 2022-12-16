@@ -1,0 +1,184 @@
+flex 연습문제: https://flexboxfroggy.com/#ko
+
+1단계
+justify-content: flex-end;
+
+2단계
+justify-content: center;
+
+3단계
+justify-content: space-around;
+
+4단계
+justify-content: space-between;
+
+5단계
+align-items: flex-end;
+
+6단계
+justify-content: center;
+align-items: center;
+
+7단계
+justify-content: space-around;
+align-items: flex-end;
+
+8단계
+flex-direction: row-reverse;
+
+9단계
+flex-direction: column;
+
+10단계
+flex-direction: row-reverse;
+justify-content: flex-end;
+
+11단계
+flex-direction: column;
+justify-content: flex-end;
+
+12단계
+flex-direction: column-reverse;
+justify-content: space-between;
+
+13단계
+flex-direction: row-reverse;
+justify-content: center;
+align-items: flex-end;
+
+14단계
+order: 1;
+
+15단계
+order: -1;
+
+16단계
+align-self: flex-end;
+
+17단계
+order: 1;
+align-self: flex-end;
+
+18단계
+flex-wrap: wrap;
+
+19단계
+flex-wrap: wrap;
+flex-direction: column;
+
+20단계
+flex-flow: column wrap;
+
+21단계
+align-content: flex-start;
+
+22단계
+align-content: flex-end;
+
+23단계
+flex-direction: column-reverse;
+align-content: center;
+
+24단계
+flex-direction: column-reverse;
+flex-wrap: wrap-reverse;
+justify-content: center;
+align-content: space-between;
+
+
+grid 연습문제: https://cssgridgarden.com/#ko
+grid-column-start, grid-column-end -> grid-column
+grid-row-start, grid-row-end -> grid-row
+
+1단계
+grid-column-start: 3;
+
+2단계
+grid-column-start: 5;
+
+3단계
+grid-column-end: 4;
+
+4단계
+grid-column-end: 2;
+
+5단계
+grid-column-end: -2;
+
+6단계
+grid-column-start: -3;
+
+7단계
+grid-column-end: span 2;
+
+8단계
+grid-column-end: span 5;
+
+9단계
+grid-column-start: span 3;
+
+10단계
+grid-column: 4/6;
+
+11단계
+grid-column: 2/span 3;
+또는
+grid-column: 2/5;
+
+12단계
+grid-row-start: 3;
+
+13단계
+grid-row: 3/span 3;
+또는
+grid-row: 3/6;
+
+14단계
+grid-column: 2/3;
+grid-row: 5/6;
+
+15단계
+grid-column: 2/span 4;
+grid-row: 1/span 5;
+또는
+grid-column: 2/6;
+grid-row: 1/6;
+
+16단계
+grid-area: 1/2/span 3/span 4;
+
+17단계
+grid-area: 2/3/5/6;
+
+18단계
+order: 1;
+
+19단계
+order: -1;
+
+20단계
+grid-template-columns: 50%;
+
+21단계
+grid-template-columns: repeat(8, 12.5%);
+
+22단계
+grid-template-columns: 100px 3em 40%;
+
+23단계
+grid-template-columns: 1fr 5fr;
+
+24단계
+grid-template-columns: 50px repeat(3, 1fr) 50px;
+
+25단계
+grid-template-columns: 75px 3fr 2fr;
+
+26단계
+grid-template-rows: 50px 0 0 0 1fr;
+
+27단계
+grid-template: 6fr 4fr/200px;
+
+28단계
+grid-template: 1fr 50px/1fr 4fr;

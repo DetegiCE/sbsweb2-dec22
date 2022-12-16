@@ -8,3 +8,28 @@ inline-grid - 인라인 요소에서 그리드 배치
 grid-template-columns, grid-template-rows: 그리드 컨테이너에 항목을 배치할 때 열과 행의 크기와 개수를 지정하는 속성
 
 g-t-c와 g-t-r에 사용할 수 있는 fr 단위: fraction (분수) 의 줄임말 -> 상대적인 크기를 지정할 수 있음
+
+같은 숫자가 반복되는 경우, repeat 함수를 사용해서 처리할 수 있음
+repeat(개수, 단위)
+g-t-c: 1fr 1fr 1fr 1fr 1fr 1fr; -> g-t-c: repeat(6, 1fr);
+
+
+grid에서 박스 내부의 내용이 높이보다 더 크다면 잘리거나 넘치는 경우가 생김 -> minmax 함수 
+줄의 높이를 고정하지 않고 최솟값과 최댓값을 유연하게 지정하여 사용할 수 있음
+
+minmax(100px, auto) -> 최소 100px 최대 auto (내부 내용의 크기에 맞춘다)
+
+repeat 함수 내부에서 개수를 지정하는 부분에 auto-fit과 auto-fill을 지정할 수 있음
+auto-fit을 사용하면 화면이 넓을 때에는 남는 공간 없이 꽉 채워서 표시
+auto-fill을 사용하면 화면이 넓을 때에는 최소 너비만 표현하고 남는 공간은 그대로 둠
+
+
+그리드 항목 사이에 간격 지정: grid-gap, grid-column-gap, grid-row-gap
+grid-gap: [grid-row-gap] [grid-column-gap]
+
+
+그리드 항목을 그리드에 배치하는 방식: grid-column, grid-row
+그리드 번호를 지정해서 해당 범위에 아이템을 배치
+grid-column: 시작번호/끝번호;
+grid-row: 시작번호/끝번호;
+

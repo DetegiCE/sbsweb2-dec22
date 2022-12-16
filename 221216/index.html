@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            width: 50px;
+            height: 50px;
+        }
+        .blue { background-color: blue; }
+        .yellow { background-color: yellow; }
+        .green { background-color: green; }
+        #gridwrap {
+            display: grid;
+            background-color: black;
+            grid-template-columns: repeat(3, 50px);
+            grid-template-rows: repeat(3, 50px);
+            grid-column-gap: 100px;
+            grid-row-gap: 75px;
+            width: 350px;
+        }
+        #flexwrap1 {
+            display: flex;
+            flex-wrap: wrap;
+            background: black;
+            width: 350px;
+        }
+        #flexwrap1 > div {
+            margin-right: 100px;
+            margin-bottom: 75px;
+        }
+        #flexwrap1 > div:nth-child(3n) {
+            margin-right: 0;
+        }
+        #flexwrap1 > div:nth-child(7),
+        #flexwrap1 > div:nth-child(8),
+        #flexwrap1 > div:nth-child(9) {
+            margin-bottom: 0;
+        }
+        #flexwrap2 {
+            background-color: black;
+            width: 350px;
+            height: 300px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+        #flexwrap2 > section {
+            display: flex;
+            justify-content: space-between;
+        }
+    </style>
+</head>
+<body>
+    <section id="gridwrap">
+        <div class="blue"></div>
+        <div class="blue"></div>
+        <div class="yellow"></div>
+        <div class="green"></div>
+        <div></div>
+        <div class="green"></div>
+        <div class="yellow"></div>
+        <div class="yellow"></div>
+        <div class="blue"></div>
+    </section>
+    <section id="flexwrap1">
+        <div class="blue"></div>
+        <div class="blue"></div>
+        <div class="yellow"></div>
+        <div class="green"></div>
+        <div></div>
+        <div class="green"></div>
+        <div class="yellow"></div>
+        <div class="yellow"></div>
+        <div class="blue"></div>
+    </section>
+    <section id="flexwrap2">
+        <section>
+            <div class="blue"></div>
+            <div class="blue"></div>
+            <div class="yellow"></div>
+        </section>
+        <section>
+            <div class="green"></div>
+            <div class="green"></div>
+        </section>
+        <section>
+            <div class="yellow"></div>
+            <div class="yellow"></div>
+            <div class="blue"></div>
+        </section>
+    </section>
+</body>
+</html>
