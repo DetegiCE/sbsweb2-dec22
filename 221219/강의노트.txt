@@ -1,0 +1,91 @@
+부트스트랩 
+-> html, css 코드를 지금까지는 직접 다 짰는데 기본적인 템플릿
+링크: https://getbootstrap.kr/
+
+메인 페이지에서 아래로 내리면 CDN으로 포함시키기
+-> 부트스트랩의 CSS와 JS 파일을 외부에서 가져오는 외부 스타일시트/외부 스크립트
+
+기본적인 값도 다르다
+- 브라우저 기본 스타일/스크립트가 삭제
+- 기본 폰트도 다름
+
+아이콘 메뉴
+- 가장 아래로 내리면 설치 -> CDN으로 설치
+-> <i> 태그를 이용하여 아이콘을 사용할 수 있게 함
+
+부트스트랩 코드를 그대로 복사 붙여넣기 했을 경우에 탭 개수가 안맞는 경우가 있음
+-> Ctrl+A(전체선택) -> Ctrl+K+F(Format Selection, 형태 선택)
+
+문서-컴포넌트 메뉴
+- 웹 페이지에서 요소 하나하나의 틀을 제공해주는 부분
+
+부트스트랩의 템플릿 색상
+- primary -> 파란색
+- secondary -> 회색
+- success -> 초록색
+- danger -> 빨간색
+- warning -> 노란색
+- info -> 아쿠아색
+- light -> 밝은 회색
+- dark -> 어두운 회색
+    --bs-primary: #0d6efd;
+    --bs-secondary: #6c757d;
+    --bs-success: #198754;
+    --bs-info: #0dcaf0;
+    --bs-warning: #ffc107;
+    --bs-danger: #dc3545;
+    --bs-light: #f8f9fa;
+    --bs-dark: #212529;
+
+아코디언 (accordion)
+- class="accordion" -> 아코디언 선언 클래스
+- class="accordion-item" -> 아코디언 아이템 선언 클래스
+  - .accordion-header -> 아코디언 제목
+    아코디언 제목의 id 값은 아코디언 바디의 aria-labelledby 와 같아야 한다
+    - .accordion-button -> 제목 부분의 버튼
+      버튼의 data-bs-target과 aria-controls는 아코디언 바디의 id값과 같아야 한다
+      aria-expanded -> 기본적으로 웹 페이지를 열었을 때 이 아코디언 아이템이 열려있는가? (true, false)
+  - .accordion-collapse -> 아코디언 바디
+      아코디언 바디의 클래스에 show를 추가해야 aria-expanded와 연동이 된다
+      data-bs-parent 속성 값이 아코디언의 id값과 동일해야 한다
+
+
+경고창 (alert)
+- .alert -> 경고창
+- .alert-<색상이름> -> 경고창이 어떤 색상을 가지는지
+  - .alert-link -> <색상이름>에 해당하는 색상의 링크 색을 변경해준다
+
+
+배지 (badge)
+기본적으로 span 태그 사용
+- .badge -> 배지 상성
+- .bg-<색상이름> -> 배지의 배경 색을 바꿀 수 있다
+- .text-bg-<색상이름> -> 배지의 배경 색을 해당 색으로 바꾸면서 글씨 색을 눈에 띄도록 변경
+- .rounded-pill -> 알약모양으로 변경
+
+
+브레드크럼 (breadcrumb)
+네비게이션에서 현재 위치
+- ol 태그 + li 태그로 생성
+- ol.breadcrumb -> 브레드크럼 생성
+  - li.breadcrumb-item -> 브레드크럼의 아이템
+  - li.active -> 현재 페이지 (+aria-current="page")
+브레드크럼을 감싸는 nav 태그에서 style에 bs-breadcrumb-divider 변수를 변경해주면 브레드크럼의 구분자를 바꿀 수 있다
+
+
+버튼 (button)
+태그는 상관이 없음 (button이나 input이나 div나 아무거나 사용 가능)
+- .btn -> 버튼 선언
+- .btn-<색상이름> -> 해당 버튼의 색상을 지정
+- .btn-outline-<색상이름> -> 해당 버튼을 테두리만 있는 버튼으로 지정
+- .btn-<크기이름> -> 해당 버튼의 크기를 변경
+
+버튼에 input 태그를 달아서 .btn-check 지정하면 체크박스/라디오버튼으로 사용가능
+
+버튼 그룹 (button group)
+버튼 여러개를 합친 것
+반드시 div 또는 관련 시맨틱 태그를 이용하여 버튼들을 감싸야 함
+- .btn-group -> 버튼 그룹을 선언
+- .btn-group-<색상이름> -> 버튼 그룹의 크기를 한번에 지정
+- .btn-group-vertical -> 수직으로 된 버튼 그룹
+

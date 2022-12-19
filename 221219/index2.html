@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <!-- JavaScript Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+    <style>
+        :root {
+            --button-height: 38;
+        }
+        .radio {
+            display: flex;
+            flex-direction: column;
+            width: 80px;
+            position: relative;
+        }
+        .radio > label {
+            text-align: center;
+            line-height: calc(var(--button-height) * 1px);
+            height: calc(var(--button-height) * 1px);
+            color: var(--bs-danger);
+        }
+        .radio-text > input {
+            appearance: none;
+            border: 1px solid var(--bs-danger);
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 80px;
+            height: calc(var(--button-height) * 1px);
+            cursor: pointer;
+            
+            transition: all 0.2s;
+        }
+        .radio-text > input:checked {
+            background-color: var(--bs-danger);
+        }
+        .radio-text > input:checked::after {
+            content: attr(value);
+            color: white;
+            width: 80px;
+            display: block;
+            text-align: center;
+        }
+        .radio > .radio-text:nth-child(2) > input {
+            top: calc(var(--button-height) * 1px);
+        }
+        .radio > .radio-text:nth-child(3) > input {
+            top: calc(var(--button-height) * 2px);
+        }
+        .radio > .radio-text:first-child > input {
+            border-top-left-radius: 7px;
+            border-top-right-radius: 7px;
+        }
+        .radio > .radio-text:last-child > input {
+            border-bottom-left-radius: 7px;
+            border-bottom-right-radius: 7px;
+        }
+    </style>
+</head>
+<body>
+    
+    <div class="btn-group-vertical" role="group" aria-label="Vertical radio toggle button group">
+        <input type="radio" class="btn-check" name="vbtn-radio" id="vbtn-radio1" autocomplete="off" checked>
+        <label class="btn btn-outline-danger" for="vbtn-radio1">Radio 1</label>
+        <input type="radio" class="btn-check" name="vbtn-radio" id="vbtn-radio2" autocomplete="off">
+        <label class="btn btn-outline-danger" for="vbtn-radio2">Radio 2</label>
+        <input type="radio" class="btn-check" name="vbtn-radio" id="vbtn-radio3" autocomplete="off">
+        <label class="btn btn-outline-danger" for="vbtn-radio3">Radio 3</label>
+    </div>
+
+    <div class="radio">
+        <label class="radio-text" for="radio1">
+            <input type="radio" name="bs-radio" id="radio1" value="Radio 1" checked>Radio 1</label>
+        <label class="radio-text" for="radio2">
+            <input type="radio" name="bs-radio" id="radio2" value="Radio 2">Radio 2</label>
+        <label class="radio-text" for="radio3">
+            <input type="radio" name="bs-radio" id="radio3" value="Radio 3">Radio 3</label>
+    </div>
+</body>
+</html>
