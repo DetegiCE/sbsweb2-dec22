@@ -1,0 +1,74 @@
+카드 cards
+- 쇼핑몰 사이트에서 아이템 소개하는 부분
+- 사진(썸네일), 제목, 본문, 버튼
+
+- .card -> 카드임을 선언
+  - .card-header -> 카드의 헤더
+  - .card-img-top -> 카드의 상단부 이미지
+  - .card-img-overlay -> 카드를 덮는 텍스트 (.card-body 와 동일한 자식 값들을 가짐)
+  - .card-body -> 카드의 본문
+    - .card-title -> 카드의 제목 (h 태그 설정)
+    - .card-subtitle -> 카드의 부제목 
+    - .card-text -> 카드의 텍스트 (p 태그 설정)
+    - .card-link -> 카드의 링크 (a 태그 설정)
+  - .card-img-bottom -> 카드의 하단부 이미지
+  - .card-footer -> 카드의 푸터
+=> 이 .card 들을 묶은 것이 .card-group
+
+
+캐러셀 carousel
+- 텍스트나 이미지를 슬라이드 시키면서 여러개 표시
+
+- .carousel -> 캐러셀 선언 (+.slide)
+(+ .carousel-fade : 전환 시 페이드 효과)
+  - .carousel-inner -> 캐러셀 내부 사진을 감싸는 부분
+    - .carousel-item -> 캐러셀 아이템 (+.active)
+      - .carousel-caption -> 캐러셀의 설명 (h5, p 등)
+  - .carousel-indicators -> 캐러셀의 페이지 표시
+    페이지버튼
+      data-bs-target 속성이 캐러셀의 아이디 값과 동일해야 함
+캐러셀 버튼
+      data-bs-slide-to -> 몇번째 슬라이드로 이동시킬지
+- .carousel-control-prev -> 이전 버튼
+- .carousel-control-next -> 다음 버튼
+ data-bs-target 속성이 캐러셀의 아이디 값과 동일해야 함
+
+콜랩스 (collapse)
+- 컨텐츠를 열고 닫기
+- .collapse를 하고 내부에 컴포넌트를 넣으면 해당 컴포넌트가 버튼으로 인해 열리고 닫히는것이 가능
+
+콜랩스 버튼
+- data-bs-toggle="collapse"
+- data-bs-target: 어떤 콜랩스를 이 버튼을 통해서 열고 닫을지 (a 태그로 만든 경우에는 href 에 해당)
+- aria-controls: 어떤 콜랩스를 조절할지 아이디 값을 넣어줌
+
+
+드롭다운 dropdown
+- .dropdown -> 드롭다운을 생성
+버튼부분
+- .dropdown-toggle
+  data-bs-toggle="dropdown"
+리스트부분
+- ul.dropdown-menu
+  - li.dropdown-item
+
+
+목록 그룹 list group
+- (ul|div).list-group -> 목록 그룹 생성
+  - (li|a|button).list-group-item -> 목록 그룹 아이템 (+.active 활성화, +.disabled 비활성화)
+
+
+모달 modal
+모달 vs 팝업
+- .modal -> 선언
+ - .modal-dialog -> modal-wrap과 비슷한 포지션
+  - .modal-content -> 모달의 내용물 
+   - .modal-header -> 헤더 부분
+   - .modal-body -> 바디 부분
+   - .modal-footer -> 푸터 부분
+모달 닫기 버튼
+data-bs-dismiss="modal"
+
+모달 소환 버튼
+- data-bs-toggle="modal"
+- data-bs-target: modal의 아이디 값

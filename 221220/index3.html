@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .card-group {
+            display: flex;
+            flex-direction: row;
+        }
+        .card-group > .card:not(:last-child) {
+            border-right: none;
+        }
+        .card-group > .card:first-child {
+            border-top-left-radius: 7px;
+            border-bottom-left-radius: 7px;
+        }
+        .card-group > .card:first-child > img {
+            border-top-left-radius: 7px;
+        }
+        .card-group > .card:last-child {
+            border-top-right-radius: 7px;
+            border-bottom-right-radius: 7px;
+        }
+        .card-group > .card:last-child > img {
+            border-top-right-radius: 7px;
+        }
+        .card {
+            width: 200px;
+            border: 1px solid #DDD;
+        }
+        .card > img {
+            width: 100%;
+        }
+        .card-body {
+            padding: 10px;
+        }
+        .card-title {
+            margin: 0;
+            font-size: 1em;
+            font-weight: normal;
+        }
+        .card-text {
+            margin-top: 5px;
+            font-size: 0.8em;
+        }
+        .card-text > small {
+            color: #888;
+        }
+    </style>
+</head>
+<body>
+    <div class="card-group">
+        <div class="card">
+            <img src="./img/xmas.jpg">
+            <div class="card-body">
+                <h5 class="card-title">Card title</h5>
+                <p class="card-text">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+                <p class="card-text"><small>Last updated 3 mins ago</small></p>
+            </div>
+        </div>
+        <div class="card">
+            <img src="./img/xmas.jpg">
+            <div class="card-body">
+                <h5 class="card-title">Card title</h5>
+                <p class="card-text">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+                <p class="card-text"><small>Last updated 3 mins ago</small></p>
+            </div>
+        </div>
+        <div class="card">
+            <img src="./img/xmas.jpg">
+            <div class="card-body">
+                <h5 class="card-title">Card title</h5>
+                <p class="card-text">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+                <p class="card-text"><small>Last updated 3 mins ago</small></p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
