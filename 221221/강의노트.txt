@@ -1,0 +1,103 @@
+내비게이션 바 (navbar)
+- 사이트의 상단에 있는 메뉴를 나타내는 부분
+
+- nav.navbar -> 내비게이션 바 선언
+ -> 여러 기능들을 안에 합쳐 놓은것
+
+오프캔버스 (offcanvas)
+- 사이드에서 나오는 메뉴
+
+div.offcanvas
+- div.offcanvas-header
+- div.offcanvas-body
+
+
+페이지네이션 (pagination)
+- 페이지를 표시하는 부분
+ul.pagination
+- li.page-item
+
+
+플레이스홀더 (placeholder)
+- 로딩 중임을 표시해주는 것
+
+.placeholder -> 플레이스홀더 선언
+.placeholder-glow > .placeholder -> 깜빡이는 플레이스 홀더
+.placeholder-wave > .placeholder -> 옆으로 연한 색이 움직이는 플레이스 홀더
+(+.bg-<색상이름> 으로 색상을 적용할 수 있음)
+.placeholder-<크기이름> -> 크기 조절 가능
+
+부트스트랩에서는 전체 너비 12로 두고 계산
+col-6 -> 12칸 중 6칸 차지, col-4 -> 4/12, col-8 -> 8/12
+
+
+팝 오버 popover
+- 설명 띄우기
+
+<body> 태그의 맨 아래 부분에 <script> 태그 추가
+팝오버 활성화 코드 추가
+
+button 태그에 사용
+- data-bs-toggle="popover" -> 팝오버 선언
+- data-bs-placement="top|right|bottom|left" -> 팝오버가 나오게 되는 위치
+- data-bs-title -> 팝오버의 제목
+- data-bs-content -> 팝오버의 내용
+
+
+프로그레스 (progress)
+- 진행 바
+
+.progress -> 프로그레스 바를 선언
+.progress-bar -> 실제 프로그레스 바 부분
+ - role="progressbar"
+ - aria-valuenow -> 실제 HTML에 보여지는데에는 의미가 없지만 서버나 자바스크립트에 활용할 때
+ - aria-valuemin, aria-valuemax
+ - style="width: ?%" -> HTML에 보여지는 부분
+
+프로그레스 바 -> div
+div 내부에 텍스트를 넣게 되면 해당 텍스트가 프로그레스 바에 나타나게 됨
+
+.progress에 배경색을 추가 -> 뒷 부분의 배경색
+.progress-bar에 배경색을 추가 -> 프로그레스바의 배경색
+
+.progress-bar-striped -> 대각선 무늬가 있는 프로그레스 바
++ .progress-bar-animated -> 움직이는 대각선 무늬
+
+
+스크롤스파이 (scrollspy)
+버튼을 누르면 해당 메뉴로 이동
+글이 이동할때마다 버튼 부분도 활성화된 것이 이동
+-> 부트스트랩 없이도 기본 HTML로도 구현 가능한 기능
+a 태그의 href에 #id값을 넣으면 해당하는 id값 위치로 이동
+
+div
+- data-bs-spy="scroll" -> 스크롤스파이
+- data-bs-smooth-scroll="true" -> 자연스러운 움직임
+      false로 하거나 안넣을 경우 -> 그냥 이동
+
+
+스피너 spinner
+-> 돌아가는 로딩
+div.spinner-border -> 스피너 구현
+색깔을 부여할 때에는 text-<색상이름>
+
+토스트 메시지 toast
+- 하단에 메시지를 띄워주는 기능
+- 자바스크립트로 작동되는 기능이기 때문에 반드시 <script> 태그 안에 자바스크립트 코드의 작성이 필요
+
+- 토스트를 띄우는 버튼의 id값과 자바스크립트의 toastTrigger에 작성된 id값이 동일해야 함
+- div.toast-container 안의 div의 id값과 자바스크립트의 toatLive에 작성된 id값이 동일해야 함
+
+- .toast-header
+ - 이미지, 제목, 텍스트
+ - button data-bs-dismiss를 통해 토스트를 지울 버튼
+- .toast-body
+
+
+툴팁 tooltip
+- 팝오버와 비슷하게 힌트를 띄워주는 기능
+팝오버 (클릭) vs 툴팁 (호버)
+- 툴팁도 자바스크립트로 구현된 기능이기 때문에 반드시 <script> 태그에 자바스크립트 코드를 작성해야 함
+
+- data-bs-toggle="tooltip" -> 툴팁 선언
+- data-bs-title="" -> 툴팁에 들어갈 글씨
