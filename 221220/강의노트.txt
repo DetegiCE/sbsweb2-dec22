@@ -59,7 +59,10 @@
 
 
 모달 modal
-모달 vs 팝업
+모달 -> 현재 창에서 html코드 추가로 띄워줌 
+vs 
+팝업 -> 새 창에서 띄워줌
+
 - .modal -> 선언
  - .modal-dialog -> modal-wrap과 비슷한 포지션
   - .modal-content -> 모달의 내용물 
