@@ -1,0 +1,59 @@
+shape-outside & clip-path
+-> 모양이 있는 공간을 생성할 수 있음
+
+shape-outside: 모양 자체를 변경
+clip-path: 기존의 모양을 잘린것처럼 보이게
+
+
+float: left를 이용해서 공간과 텍스트를 옆에 붙이는데, 그 공간이 사각형이 아니라 특정 모양을 넣을 수 있다
+
+shape-outside -> 원, 타원, 사진, 다각형, 패스(path)
+
+원: circle(50%); circle(크기 at 좌표)
+
+타원: ellipse(크기 at 좌표);
+ex) ellipse(100px 200px at 50% 50%)
+
+사진: 투명 배경에 글씨가 오는 방식
+HTML 코드에는 img 태그로 추가
+CSS 코드에도 shape-outside에 url로 추가
+
+jpg -> 투명이 안되기 때문에 X
+png, gif -> 투명이 됨
+- gif는 투명이 0 or 1
+- png는 투명이 0~1 사이의 소수 (0이 투명, 1이 불투명)
+png는 투명 값이 딱 떨어지지 않기 때문에 경계선을 지정
+-> shape-image-threshold
+임계값 이상인 경우는 텍스트가 X, 미만일 경우에 텍스트 O
+
+다각형 polygon(좌표1, 좌표2, ....)
+
+shape-outside로 만든 공간에 대해서 주변에 마진을 주고 싶을 때 그냥 margin 속성을 사용하면 X 
+-> shape-margin 속성
+shape-margin은 지정한 width와 height 공간 내부에서만 늘어남
+
+
+clip-path
+-> https://bennettfeely.com/clippy/
+
+circle(값), circle(크기 at 좌표)
+-> 해당 좌표에서 해당 크기만큼의 원형으로 클리핑
+
+ellipse(크기 at 좌표)
+
+polygon(좌표1, 좌표2, ...)
+
+path() -> 수식
+
+clip-path에 애니메이션을 적용해서 모양의 변화가 가능
+-> clip-path에 들어있는 좌표의 개수가 동일해야 함
+좌표 개수가 다르면 애니메이션이 부드럽지 않음
+
+
+
+애니메이션(animation) 속성을 이용해서
+처음에는 정사각형
+1초 후에는 직사각형
+2초 후에는 찌그러진 사각형
+3초 후에는 삼각형
+shape-outside, clip-path 둘 다 사용
