@@ -204,6 +204,310 @@
             height: 98%;
             opacity: 1;
         }
+
+        .hover-border-4::before,
+        .hover-border-4::after {
+            content: "";
+            width: 0%;
+            height: 0%;
+            opacity: 0;
+            transition: height 0.2s linear, width 0.15s linear 0.2s, opacity 0s;
+        }
+        .hover-border-4::before {
+            top: 0;
+            right: 0;
+            border-bottom: 1px solid black;
+            border-right: 1px solid black;
+        }
+        .hover-border-4::after {
+            bottom: 0;
+            left: 0;
+            border-top: 1px solid black;
+            border-left: 1px solid black;
+        }
+        .hover-border-4:hover::before,
+        .hover-border-4:hover::after {
+            width: 99%;
+            height: 98%;
+            opacity: 1;
+        }
+
+        
+        .hover-border-5::before,
+        .hover-border-5::after {
+            content: "";
+            width: 0%;
+            height: 0%;
+            opacity: 0;
+        }
+        .hover-border-5::before {
+            top: 0;
+            right: 0;
+            border-top: 1px solid black;
+            border-left: 1px solid black;
+            transition: height 0.15s linear 0.2s, width 0.2s linear, opacity 0s;
+        }
+        .hover-border-5::after {
+            bottom: 0;
+            left: 0;
+            border-bottom: 1px solid black;
+            border-right: 1px solid black;
+            transition: height 0.15s linear 0.55s, width 0.2s linear 0.35s, opacity 0s;
+        }
+        .hover-border-5:hover::before,
+        .hover-border-5:hover::after {
+            width: 99%;
+            height: 98%;
+            opacity: 1;
+        }
+
+        .btn-4 span {
+            color: black;
+            background-color: #EEE;
+        }
+        .btn-4::before,
+        .btn-4::after {
+            position: absolute;
+            content: "";
+            width: 15%;
+            height: 2px;
+            background-color: black;
+            z-index: 2;
+        }
+
+        .hover-border-6::before,
+        .hover-border-6::after {
+            top: 0;
+            transition: width 0.2s linear;
+        }
+        .hover-border-6::before {
+            right: 50%;
+        }
+        .hover-border-6::after {
+            left: 50%;
+        }
+        .hover-border-6:hover::before,
+        .hover-border-6:hover::after {
+            width: 50%;
+        }
+        .hover-border-6 span::before,
+        .hover-border-6 span::after {
+            position: absolute;
+            content: "";
+            width: 0%;
+            height: 0%;
+            background: transparent;
+            z-index: 2;
+            opacity: 0;
+            transition: height 0.2s linear 0.2s, width 0.2s linear 0.4s, opacity 0s 0.2s;
+        }
+        .hover-border-6 span::before {
+            top: 0;
+            left: 0;
+            border-left: 2px solid black;
+            border-bottom: 2px solid black;
+        }
+        .hover-border-6 span::after {
+            top: 0;
+            right: 0;
+            border-right: 2px solid black;
+            border-bottom: 2px solid black;
+        }
+        .hover-border-6 span:hover::before,
+        .hover-border-6 span:hover::after {
+            width: 50%;
+            height: 100%;
+            opacity: 1;
+        }
+
+        .hover-border-7::before,
+        .hover-border-7::after {
+            bottom: 0;
+            transition: width 0.2s linear;
+        }
+        .hover-border-7::before {
+            right: 50%;
+        }
+        .hover-border-7::after {
+            left: 50%;
+        }
+        .hover-border-7:hover::before,
+        .hover-border-7:hover::after {
+            width: 50%;
+        }
+        .hover-border-7 span::before,
+        .hover-border-7 span::after {
+            position: absolute;
+            content: "";
+            width: 0%;
+            height: 0%;
+            background: transparent;
+            z-index: 2;
+            opacity: 0;
+            transition: height 0.2s linear 0.2s, width 0.2s linear 0.4s, opacity 0s 0.2s;
+        }
+        .hover-border-7 span::before {
+            bottom: 0;
+            left: 0;
+            border-left: 2px solid black;
+            border-top: 2px solid black;
+        }
+        .hover-border-7 span::after {
+            bottom: 0;
+            right: 0;
+            border-right: 2px solid black;
+            border-top: 2px solid black;
+        }
+        .hover-border-7 span:hover::before,
+        .hover-border-7 span:hover::after {
+            width: 50%;
+            height: 100%;
+            opacity: 1;
+        }
+        
+        .hover-border-8::before,
+        .hover-border-8::after {
+            bottom: 0;
+        }
+        .hover-border-8::before {
+            right: 50%;
+            transition: width 0.2s linear;
+        }
+        .hover-border-8::after {
+            left: 50%;
+            transition: width 0.1s linear;
+        }
+        .hover-border-8:hover::before,
+        .hover-border-8:hover::after {
+            width: 50%;
+        }
+        .hover-border-8 span::before,
+        .hover-border-8 span::after {
+            position: absolute;
+            content: "";
+            width: 0%;
+            height: 0%;
+            background: transparent;
+            z-index: 2;
+            opacity: 0;
+        }
+        .hover-border-8 span::before {
+            bottom: 0;
+            left: 0;
+            border-left: 2px solid black;
+            transition: height 0.2s linear 0.2s;
+        }
+        .hover-border-8 span::after {
+            bottom: 0;
+            right: 0;
+            border-right: 2px solid black;
+            border-top: 2px solid black;
+            transition: height 0.1s linear 0.1s, width 0.2s linear 0.2s;
+        }
+        .hover-border-8 span:hover::before,
+        .hover-border-8 span:hover::after {
+            width: 98.3%;
+            height: 100%;
+            opacity: 1;
+        }
+
+        .hover-border-9::before,
+        .hover-border-9::after {
+            bottom: 0;
+        }
+        .hover-border-9::before {
+            right: 50%;
+            transition: width 0.1s linear;
+        }
+        .hover-border-9::after {
+            left: 50%;
+            transition: width 0.2s linear;
+        }
+        .hover-border-9:hover::before,
+        .hover-border-9:hover::after {
+            width: 50%;
+        }
+        .hover-border-9 span::before,
+        .hover-border-9 span::after {
+            position: absolute;
+            content: "";
+            width: 0%;
+            height: 0%;
+            background: transparent;
+            z-index: 2;
+            opacity: 0;
+        }
+        .hover-border-9 span::before {
+            bottom: 0;
+            left: 0;
+            border-left: 2px solid black;
+            border-top: 2px solid black;
+            transition: height 0.1s linear 0.1s, width 0.2s linear 0.2s;
+        }
+        .hover-border-9 span::after {
+            bottom: 0;
+            right: 0;
+            border-right: 2px solid black;
+            transition: height 0.2s linear 0.2s;
+        }
+        .hover-border-9 span:hover::before,
+        .hover-border-9 span:hover::after {
+            width: 98.3%;
+            height: 100%;
+            opacity: 1;
+        }
+
+        .hover-border-10::before,
+        .hover-border-10::after {
+            height: 30%;
+            width: 2px;
+            left: 0;
+        }
+        .hover-border-10::before {
+            top: 50%;
+            transition: height 0.2s linear;
+        }
+        .hover-border-10::after {
+            bottom: 50%;
+            transition: height 0.1s linear;
+        }
+        .hover-border-10:hover::before {
+            height: 50%;
+        }
+        .hover-border-10:hover::after {
+            height: 50%;
+        }
+        .hover-border-10 span::before,
+        .hover-border-10 span::after {
+            position: absolute;
+            content: "";
+            width: 0;
+            height: 0;
+            background: transparent;
+            z-index: 2;
+        }
+        .hover-border-10 span::after {
+            bottom: 0;
+            left: 0;
+            border-bottom: 2px solid black;
+            transition: width 0.2s linear 0.2s;
+        }
+        .hover-border-10 span:hover::after {
+            width: 100%;
+        }
+        .hover-border-10 span::before {
+            top: 0;
+            left: 0;
+            opacity: 0;
+            border-top: 2px solid black;
+            border-right: 2px solid black;
+            transition: width 0.1s linear 0.1s, height 0.2s linear 0.2s, opacity 0s;
+        }
+        .hover-border-10 span:hover::before {
+            width: 100%;
+            height: 95.7%;
+            opacity: 1;
+        }
     </style>
 </head>
 <body>
@@ -252,6 +556,22 @@
         <span>HOVER ME</span>
     </button>
     <button class="btn btn-3 hover-border-5">
+        <span>HOVER ME</span>
+    </button>
+    
+    <button class="btn btn-4 hover-border-6">
+        <span>HOVER ME</span>
+    </button>
+    <button class="btn btn-4 hover-border-7">
+        <span>HOVER ME</span>
+    </button>
+    <button class="btn btn-4 hover-border-8">
+        <span>HOVER ME</span>
+    </button>
+    <button class="btn btn-4 hover-border-9">
+        <span>HOVER ME</span>
+    </button>
+    <button class="btn btn-4 hover-border-10">
         <span>HOVER ME</span>
     </button>
 </body>
