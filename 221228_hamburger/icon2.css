@@ -1,0 +1,113 @@
+:root {
+    --dist1: 7.25;
+    --dist2: 17.75;
+}
+
+.nav-icon-2 {
+    width: 30px;
+    height: 30px;
+    position: relative;
+}
+
+.nav-icon-2 span {
+    display: block;
+    width: 5px;
+    height: 5px;
+    background-color: white;
+    border-radius: 50%;
+    position: absolute;
+}
+
+.nav-icon-2 span:nth-child(1) {
+    left: 0;
+    top: 0;
+}
+
+.nav-icon-2 span:nth-child(2) {
+    left: 12.5px;
+    top: 0;
+}
+
+.nav-icon-2 span:nth-child(3) {
+    right: 0;
+    top: 0;
+}
+
+.nav-icon-2 span:nth-child(4) {
+    left: 0;
+    top: 12.5px;
+}
+
+.nav-icon-2 span:nth-child(5) {
+    left: 12.5px;
+    top: 12.5px;
+}
+
+.nav-icon-2 span:nth-child(6) {
+    right: 0;
+    top: 12.5px;
+}
+
+.nav-icon-2 span:nth-child(7) {
+    left: 0;
+    bottom: 0;
+}
+
+.nav-icon-2 span:nth-child(8) {
+    left: 12.5px;
+    bottom: 0;
+}
+
+.nav-icon-2 span:nth-child(9) {
+    right: 0;
+    bottom: 0;
+}
+
+.nav-icon-2.open {
+    transform: rotate(180deg);
+    transition: 0.2s cubic-bezier(0.8, 0.5, 0.2, 1.4);
+}
+
+.nav-icon-2.open span {
+    transition: 0.2s cubic-bezier(0.8, 0.5, 0.2, 1.4) 0.1s;
+}
+
+.nav-icon-2.open span:nth-child(1) {
+    left: calc(var(--dist1) * 1px);
+    top: 0;
+}
+
+.nav-icon-2.open span:nth-child(2) {
+    left: calc(var(--dist2) * 1px);
+    top: 0;
+}
+
+.nav-icon-2.open span:nth-child(3) {
+    right: 0;
+    top: calc(var(--dist1) * 1px);
+}
+
+.nav-icon-2.open span:nth-child(4) {
+    left: 0;
+    top: calc(var(--dist1) * 1px);
+}
+
+.nav-icon-2.open span:nth-child(6) {
+    right: 0;
+    top: calc(var(--dist2) * 1px);
+}
+
+.nav-icon-2.open span:nth-child(7) {
+    left: 0;
+    top: calc(var(--dist2) * 1px);
+}
+
+.nav-icon-2.open span:nth-child(8) {
+    left: calc(var(--dist1) * 1px);
+    bottom: 0;
+}
+
+.nav-icon-2.open span:nth-child(9) {
+    left: calc(var(--dist2) * 1px);
+    bottom: 0;
+}

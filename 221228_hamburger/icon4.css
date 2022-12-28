@@ -1,0 +1,53 @@
+.nav-icon-4 {
+    width: 35px;
+    height: 30px;
+    position: relative;
+}
+
+.nav-icon-4 span {
+    display: block;
+    position: absolute;
+    background-color: white;
+    border-radius: 2px;
+    width: 100%;
+    height: 4px;
+}
+
+.nav-icon-4 span:nth-child(1) {
+    top: 0;
+    left: 0;
+}
+
+.nav-icon-4 span:nth-child(2) {
+    top: 13px;
+    left: 0;
+}
+
+.nav-icon-4 span:nth-child(3) {
+    bottom: 0;
+    left: 0;
+}
+
+.nav-icon-4.open span:nth-child(3) {
+    transform: rotate(90deg);
+    width: 30px;
+    left: 3px;
+    top: 12px;
+    transition: 0.3s cubic-bezier(0.8, 0.5, 0.2, 1.4) 0.15s;
+}
+
+.nav-icon-4.open span:nth-child(2) {
+    transform: rotate(45deg);
+    width: 20px;
+    left: 14.5px;
+    top: 5px;
+    transition: 0.3s cubic-bezier(0.8, 0.5, 0.2, 1.4) 0.05s;
+}
+
+.nav-icon-4.open span:nth-child(1) {
+    transform: rotate(-45deg);
+    width: 20px;
+    left: 2px;
+    top: 5px;
+    transition: 0.3s cubic-bezier(0.8, 0.5, 0.2, 1.4) 0.1s;
+} 
