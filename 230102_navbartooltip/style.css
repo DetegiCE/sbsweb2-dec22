@@ -72,3 +72,16 @@ li > a:hover span {
     transform: scale(1);
     opacity: 1;
 }
+
+li > a span::before {
+    content: "";
+    display: block;
+    width: 12px;
+    height: 12px;
+    position: absolute;
+    background-color: #30305A;
+    top: 50%;
+    left: -4px;
+    transform: translateY(-50%) rotate(45deg);
+    border-radius: 3px;
+}
